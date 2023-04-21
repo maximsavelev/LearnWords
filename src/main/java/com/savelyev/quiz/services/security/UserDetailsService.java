@@ -1,4 +1,4 @@
-package com.savelyev.quiz.services;
+package com.savelyev.quiz.services.security;
 
 import com.savelyev.quiz.model.security.Role;
 import com.savelyev.quiz.model.security.User;

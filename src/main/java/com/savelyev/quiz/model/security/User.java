@@ -1,21 +1,26 @@
 package com.savelyev.quiz.model.security;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.datetime.DateFormatter;
 
 import javax.persistence.*;
+import java.time.DateTimeException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Collection;
 
 
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Data
 @Entity
 @Table(name = "users")
 public class User extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     private String username;
     private String password;
     @Transient

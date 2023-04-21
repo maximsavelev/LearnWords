@@ -20,14 +20,14 @@
                         <div class="headers">
                             <p>Имя: </p>
                             <p>Email: </p>
-                            <p>Дней на сайте: </p>
+                            <p>Заходил последний раз: </p>
 
                         </div>
 
                         <div class="user-data">
-                            <p>Maxim </p>
-                            <p>maxim@mail.ru </p>
-                            <p>352</p>
+                            <p th:text="${user.getUsername}">Maxim </p>
+                            <p th:text="${user.getEmail}" >maxim@mail.ru </p>
+                            <p th:text="${user.lastSeen}">352</p>
                         </div>
                     </div>
                 </div>
