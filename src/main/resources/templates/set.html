@@ -9,76 +9,23 @@
 <div class="main-container">
     <div class="collection-container">
         <div class="theme">
-            <h1 class="theme-title">Набор слов категории: "Компьютеры" </h1>
-            <p class="theme-count">25</p>
+            <h1 class="theme-title" th:text="${topic.name}"></h1>
+            <p class="theme-count" th:text="${topic.words.size()}">25</p>
         </div>
-        <div class="collection">
-            <div class="set">
+        <div class="collection" >
+            <div class="set" th:each="word : ${topic.getWords()}">
                 <div class="preview-containter">
-                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <img class="preview" th:src="${word.picture}" alt="logo">
                     <audio class="music" preload="auto">
                         <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls/>
                     </audio>
                     <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit"/>
                 </div>
                 <div class="describe">
-                    <h3 class="title"> Consience</h3>
-                    <p class="translate">Совесть</p>
+                    <h3 class="title" th:text="${word.wordName}"> Consience</h3>
+                    <p class="translate" th:text="${word.meaning}">Совесть</p>
                 </div>
             </div>
-            <div class="set">
-                <div class="preview-containter">
-                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                    <audio class="music" preload="auto">
-                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls/>
-                    </audio>
-                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit"/>
-                </div>
-                <div class="describe">
-                    <h3 class="title"> Consience</h3>
-                    <p class="translate">Совесть</p>
-                </div>
-            </div>
-            <div class="set">
-                <div class="preview-containter">
-                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                    <audio class="music" preload="auto" >
-                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
-                    </audio>
-                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
-                </div>
-                <div class="describe">
-                    <h3 class="title"> Consience</h3>
-                    <p class="translate">Совесть</p>
-                </div>
-            </div>
-            <div class="set">
-                <div class="preview-containter">
-                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                    <audio class="music" preload="auto" >
-                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
-                    </audio>
-                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
-                </div>
-                <div class="describe">
-                    <h3 class="title"> Consience</h3>
-                    <p class="translate">Совесть</p>
-                </div>
-            </div>
-            <div class="set">
-                <div class="preview-containter">
-                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                    <audio class="music" preload="auto" >
-                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
-                    </audio>
-                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
-                </div>
-                <div class="describe">
-                    <h3 class="title"> Consience</h3>
-                    <p class="translate">Совесть</p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 </div>

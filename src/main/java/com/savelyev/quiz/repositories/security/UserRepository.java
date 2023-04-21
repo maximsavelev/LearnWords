@@ -1,4 +1,4 @@
-package com.savelyev.quiz.repositories;
+package com.savelyev.quiz.repositories.security;
 
 import com.savelyev.quiz.model.security.User;
 import org.springframework.data.domain.Page;

@@ -8,10 +8,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name="secure_tokens")
 @Data
-public class SecureToken {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class SecureToken extends BaseEntity {
+
     private String token;
     private LocalDateTime creationTime;
 

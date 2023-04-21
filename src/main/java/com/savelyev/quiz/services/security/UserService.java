@@ -1,4 +1,4 @@
-package com.savelyev.quiz.services;
+package com.savelyev.quiz.services.security;
 
 import com.savelyev.quiz.constants.ApplicationMessages;
 import com.savelyev.quiz.exception.EntityNotFound;
@@ -7,7 +7,7 @@ import com.savelyev.quiz.model.security.Role;
 import com.savelyev.quiz.model.security.SecureToken;
 import com.savelyev.quiz.model.security.TokenType;
 import com.savelyev.quiz.model.security.User;
-import com.savelyev.quiz.repositories.UserRepository;
+import com.savelyev.quiz.repositories.security.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -119,14 +119,6 @@ public class UserService {
 
     public User findUserByPrincipal(Principal principal) {
         return findUserByName(principal.getName());
-    }
-
-    public Page<User> getUsersRating(Pageable pageable) {
-        return userRepository.ratingUsers(pageable);
-    }
-
-    public Long findUserRatingPlace(Long id) {
-        return userRepository.getUsersRatingPlace(id);
     }
 
      public Page<User> findListUsersByName(String name, Pageable pageable){

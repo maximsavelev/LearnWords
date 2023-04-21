@@ -1,11 +1,11 @@
-package com.savelyev.quiz.services;
+package com.savelyev.quiz.services.security;
 
 import com.savelyev.quiz.exception.IncorrectTokenTypeException;
 import com.savelyev.quiz.exception.TokenHasExpiredException;
 import com.savelyev.quiz.model.security.SecureToken;
 import com.savelyev.quiz.model.security.TokenType;
 import com.savelyev.quiz.model.security.User;
-import com.savelyev.quiz.repositories.SecureTokenRepository;
+import com.savelyev.quiz.repositories.security.SecureTokenRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

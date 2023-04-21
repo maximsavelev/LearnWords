@@ -2,7 +2,7 @@ package com.savelyev.quiz.validators;
 
 import com.savelyev.quiz.constants.ApplicationMessages;
 import com.savelyev.quiz.model.security.User;
-import com.savelyev.quiz.services.UserService;
+import com.savelyev.quiz.services.security.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

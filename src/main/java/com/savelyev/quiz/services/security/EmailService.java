@@ -1,4 +1,4 @@
-package com.savelyev.quiz.services;
+package com.savelyev.quiz.services.security;
 
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;

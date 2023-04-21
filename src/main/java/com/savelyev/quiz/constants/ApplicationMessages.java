@@ -1,7 +1,7 @@
 package com.savelyev.quiz.constants;
 
 
-import com.savelyev.quiz.services.TranslatorService;
+import com.savelyev.quiz.services.security.TranslatorService;
 import org.springframework.stereotype.Component;
 
 @Component

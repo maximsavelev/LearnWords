@@ -1,7 +1,7 @@
-package com.savelyev.quiz.services;
+package com.savelyev.quiz.services.security;
 
 import com.savelyev.quiz.model.security.Role;
-import com.savelyev.quiz.repositories.RoleRepository;
+import com.savelyev.quiz.repositories.security.RoleRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
