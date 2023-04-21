@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/login.css}"/>
+</head>
+
+<body>
+<div class="main">
+    <div class="image">
+        <img class="lang" th:src="@{images/login-greetings.png}" alt="lang en">
+    </div>
+    <div class="login-form">
+        <div class="language" th:switch="${#locale.toString().toUpperCase()}" >
+            <div class="dropdown">
+                <div class="title-container">
+                    <h3 th:case="'RU'" class="lang-title" th:text="#{lang_ru}">Русский</h3>
+                    <h3 th:case="'EN'" class="lang-title" th:text="#{lang_en}"></h3>
+                    <img class="pic" th:src="@{images/arrow-down-link.png}" width="15" height="9"  alt="lang en">
+                </div>
+                <div class="dropdown-content">
+                    <a th:href="@{'?locale=ru'}">Русский</a>
+                    <a th:href="@{'?locale=en'}">English</a>
+                </div>
+            </div>
+        </div>
+        <div class="login-container">
+                <h1 class="title" th:text="#{login_title}">Вход систему</h1>
+            <form class="formContent" method="POST" th:action="@{${@environment.getProperty('login_url')}}">
+                <!--/*@thymesVar id="errorMessage" type="java.lang.String"*/-->
+                <div class="response" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+                <div class="response" th:if="${infoMessage}" th:text="${infoMessage}"></div>
+                <div class="inputs">
+                    <div class="form-group">
+                        <input name="username" type="text" class="input" th:placeholder="#{user_placeholder}">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" class="input" th:placeholder="#{password_placeholder}">
+                    </div>
+                    <div>
+                        <a class="link" th:href="@{${@environment.getProperty('reset_password_url')}}"  th:text="#{login_forgot_password}">Забыли пароль</a>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="log-button" type="submit" ><p class="button-text"  th:text="#{sign_in_button}"></p></button>
+                    <div class="registration-link">
+                        <a class="link" th:href="@{/registration}"  th:text="#{already_have_account}">Еще зарегистрированы? Зарегистрироваться</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

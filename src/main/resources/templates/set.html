@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Главная</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/set.css}"/>
+</head>
+<body>
+<div class="main-container">
+    <div class="collection-container">
+        <div class="theme">
+            <h1 class="theme-title">Набор слов категории: "Компьютеры" </h1>
+            <p class="theme-count">25</p>
+        </div>
+        <div class="collection">
+            <div class="set">
+                <div class="preview-containter">
+                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <audio class="music" preload="auto">
+                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls/>
+                    </audio>
+                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit"/>
+                </div>
+                <div class="describe">
+                    <h3 class="title"> Consience</h3>
+                    <p class="translate">Совесть</p>
+                </div>
+            </div>
+            <div class="set">
+                <div class="preview-containter">
+                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <audio class="music" preload="auto">
+                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls/>
+                    </audio>
+                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit"/>
+                </div>
+                <div class="describe">
+                    <h3 class="title"> Consience</h3>
+                    <p class="translate">Совесть</p>
+                </div>
+            </div>
+            <div class="set">
+                <div class="preview-containter">
+                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <audio class="music" preload="auto" >
+                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
+                    </audio>
+                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
+                </div>
+                <div class="describe">
+                    <h3 class="title"> Consience</h3>
+                    <p class="translate">Совесть</p>
+                </div>
+            </div>
+            <div class="set">
+                <div class="preview-containter">
+                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <audio class="music" preload="auto" >
+                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
+                    </audio>
+                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
+                </div>
+                <div class="describe">
+                    <h3 class="title"> Consience</h3>
+                    <p class="translate">Совесть</p>
+                </div>
+            </div>
+            <div class="set">
+                <div class="preview-containter">
+                    <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
+                    <audio class="music" preload="auto" >
+                        <source src="https://en-audio.howtopronounce.com/15747938055ddd724dae802.mp3" controls />
+                    </audio>
+                    <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
+                </div>
+                <div class="describe">
+                    <h3 class="title"> Consience</h3>
+                    <p class="translate">Совесть</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    jQuery(function ($) {
+        $('.musicstart').on('click', function () {
+            $('.music')[0].play()
+        });
+        $('.music').hide();
+    });
+</script>
+</body>
+
+</html>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{/styles/css/header.css}"/>
+    <link th:rel="stylesheet" th:href="@{/styles/css/main.css}"/>
+</head>
+<body>
+<div th:include="header"></div>
+<div class="main">
+    <a th:href="@{${@environment.getProperty('create_question_url')}}" class="backLink wer">
+        <h1 class="backText" >Создать викторину</h1>
+    </a>
+</div>
+<div class="quizFind">
+    <div class="search-panel">
+        <h1>Поиск по пользователям </h1>
+        <form method="POST" th:action="@{${@environment.getProperty('search_user_url')}}">
+            <!--/*@thymesVar id="sourceText" type="java.lang.String"*/-->
+            <input type="text" th:value="${query}" name="query"
+                   class="input">
+            <button class="search-button" type="submit" th:text="#{find_button}">Найти</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

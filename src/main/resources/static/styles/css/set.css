@@ -1,0 +1,90 @@
+* {
+    font-family: Inter, serif;
+}
+
+.main-container {
+    margin: 0 auto;
+}
+
+.collection-container {
+
+}
+
+.theme {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000000;
+    margin-right: 24px;
+}
+
+.theme-count {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preview-containter {
+    display: flex;
+}
+
+.preview {
+    width: 188px;
+    height: 188px;
+    border-radius: 94px;
+    margin-bottom: 14px;
+}
+
+
+.set {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.musicstart {
+    width: 24px;
+    height: 24px;
+}
+
+.describe {
+    align-items: center;
+    width: 188px;
+    display: flex;
+    flex-direction: column;
+}
+
+.translate {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF5C00;
+}
+
+.title {
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/login.css}"/>
+</head>
+
+<body>
+<div class="main">
+    <div class="image">
+        <img class="lang" th:src="@{images/registration-greeting.png}" alt="logo">
+    </div>
+    <div class="login-form">
+        <div class="language" th:switch="${#locale.toString().toUpperCase()}" >
+            <div class="dropdown">
+                <div class="title-container">
+                    <h3 th:case="'RU'" class="lang-title">Русский</h3>
+                    <h3 th:case="'EN'" class="lang-title">English</h3>
+                    <img class="pic" th:src="@{images/arrow-down-link.png}" width="15" height="9"  alt="lang en">
+                </div>
+                <div class="dropdown-content">
+                    <a th:href="@{'?locale=ru'}" th:text="#{lang_ru}">Русский</a>
+                    <a th:href="@{'?locale=en'}" th:text="#{lang_en}">English</a>
+                </div>
+            </div>
+        </div>
+        <div class="login-container">
+                <h1 class="title" th:text="#{registration_title}">Регистрация</h1>
+            <form method="POST" class="form-signin" th:object="${userForm}" th:action="@{${@environment.getProperty('registration_url')}}">
+                <div class="form-group">
+                    <input type="text" th:field="*{username}" class="input" th:placeholder="#{user_placeholder}">
+                    <div class="has-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">fds</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{email}" class="input" th:placeholder="#{email_placeholder}">
+                    <div class="has-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">fds</div>
+                </div>
+                <div class="form-group">
+                    <input type="password" th:field="*{confirmPassword}" class="input"  th:placeholder="#{password_placeholder}">
+                    <div class="has-error" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}">fds</div>
+                </div>
+                <div class="form-group">
+                    <input type="password" th:field="*{password}" class="input"   th:placeholder="#{confirm_password_placeholder}" >
+                    <div class="has-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">fds</div>
+                </div>
+                <div class="buttons">
+                    <button class="log-button" type="submit" ><p class="button-text"  th:text="#{registration_button}"></p></button>
+                    <div class="registration-link">
+                        <a class="link" th:href="@{/login}" th:text="#{registration_go_to_login_page}" >Уже зарегистрированы? Войти</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

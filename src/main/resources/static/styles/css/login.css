@@ -1,0 +1,173 @@
+* {
+    font-family: 'Inter', 'serif'
+}
+
+body{
+    background-color: #B1D9DB;
+}
+
+a {
+    text-decoration: none;
+    color: #A897BD;;
+}
+
+input {border:0;outline:0;}
+input:focus {outline:none!important;}
+
+button {border:0;outline:0;}
+
+.main {
+    display: flex;
+}
+
+.image {
+    margin-left: 32px;
+    margin-top: 200px;
+    margin-right: 50px;
+}
+
+.login-form {
+    background-color: #FFFFFF;
+    border-radius: 62px;
+}
+
+.login-container {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 203px;
+    margin-top: 100px;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.input {
+    font-size: 19px;
+    width: 560px;
+    display: flex;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+
+.log-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #A7CCCE;
+    border-radius: 8px;
+    width: 560px;
+    height: 50px;
+}
+
+.button-text{
+    font-size: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.registration-link{
+    display: flex;
+    margin-bottom: 37px;
+    align-items: center;
+}
+
+.link{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #6B6A6A;
+}
+
+.language{
+    display: flex;
+    align-items: end;
+    margin-right: 150px;
+    justify-content: flex-end;
+}
+
+.lang-title{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: #A1A1A1;
+}
+
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+
+.pic{
+    margin-left: 30px;
+}
+
+.dropbtn {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 140px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 2px 0 2px 25px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #A1A1A1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #A1A1A1;
+}
+
+.dropdown-content a:first-child
+{
+    background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+}
+
+.dropdown-content a:last-child
+{
+    background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+}
+
+.has-error{
+    color: #f60101;
+    margin-top: 10px;
+}
+
+.form-group{
+    margin-bottom: 62px;
+}
+
+.response{
+    color: #f60101;
+    margin-bottom: 15px;
+    width: 500px;
+}

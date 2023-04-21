@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${user.username}"></title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/profile.css}"/>
+</head>
+<body>
+<div>
+    <div th:include="header"></div>
+    <div class="main" id="h">
+        <div class="avatar">
+            <img class="picture" th:src="@{images/cat.jpg}" width="264" height="264" alt="avatar">
+            <button class="change-avatar"><p class="change-avatar-text">Сменить аватар</p></button>
+        </div>
+        <div class="general-info">
+            <div class="information">
+                <div class="information-container">
+                    <h1 class="title">Информация</h1>
+                    <div class="info">
+                        <div class="headers">
+                            <p>Имя: </p>
+                            <p>Email: </p>
+                            <p>Дней на сайте: </p>
+
+                        </div>
+
+                        <div class="user-data">
+                            <p>Maxim </p>
+                            <p>maxim@mail.ru </p>
+                            <p>352</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="password">
+                <div class="password-wrapper">
+                    <h1 class="title">Пароль</h1>
+                    <button onclick="showBlock()" class="change-password-button">Сменить пароль</button>
+                </div>
+                <form method="post"  th:action="@{/profile}">
+                    <div style="display: none" class="password-change"  id="password-change" th:object="${passwordChanger}">
+                        <h2 class="title" >Измение пароля пароль</h2>
+                        <div class="alert" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+                        <input class="input" id="input" th:field="*{oldPassword}" type="password" placeholder="Старый пароль" />
+                        <input class="input"  th:field="*{password}" type="password" placeholder="Новый пароль" />
+                        <input class="input" th:field="*{confirmPassword}" type="password" placeholder="Повторите новый пароль" />
+                        <button  id="button" class="button-change" type="submit" th:text="#{password_reset_button}">Изменить</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+       <!-- <form  th:action="@{${@environment.getProperty('logout_url')}}" method="post">
+            <div class="user-link"  type="submit" onClick="javascript:this.parentNode.submit()">
+                <img th:src="@{/images/logout.png}" alt="minecraft" class="img"/>
+                <h1>Exit</h1>
+            </div>
+        </form>-->
+    </div>
+
+    <script>
+       function  showBlock(){
+           var div = document.getElementById('password-change');
+           console.log('bebra');
+           if (div.style.display !== 'none') {
+               div.style.display = 'none';
+           }
+           else {
+               div.style.display = 'block';
+           }
+       }
+    </script>
+</body>
+</html>
+</html>

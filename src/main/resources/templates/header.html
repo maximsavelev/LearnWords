@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title >h</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/header.css}"/>
+</head>
+<body>
+    <div id="main-header" class="header" >
+        <div class="left-side">
+            <div class="logo">
+                <img class="logotype" th:src="@{images/logo.png}" alt="logo">
+                <p class="name">Learn Words</p>
+            </div>
+            <div class="search-panel">
+                <form class="search-form">
+                    <button class="search-button" id="search-button" type="submit">Search</button>
+                    <input class="search-input" id="search-input" type="search" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="menu">
+                <h1 class="heading">Каталог</h1>
+                <h1 class="heading">Мои наборы</h1>
+            </div>
+            <div>
+                <a  th:href="@{${@environment.getProperty('profile-page_url')}}" data-toggle="tab" > <img class="profile" th:src="@{images/cat.jpg}" alt="profile"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</html>

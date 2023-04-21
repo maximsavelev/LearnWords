@@ -1,0 +1,155 @@
+* {
+    font-family: 'Inter', 'serif'
+}
+
+button {border:0;outline:0;}
+
+body{
+    background: #E7E7E7;
+}
+
+.main{
+    margin-top: 32px;
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: center;
+}
+
+.general-info{
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.avatar{
+    background: #FFFFFF;
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.picture{
+    border-radius: 16px;
+    margin: 24px 32px 32px 32px;
+}
+
+
+
+.change-avatar{
+    background: linear-gradient(93.75deg, #F7CE46 3.76%, #FBE27E 90.19%);
+    border-radius: 4px;
+    width: 264px;
+    height: 48px;
+    margin-bottom: 50px;
+}
+
+.change-avatar-text{
+    color: #000000;
+    font-size: 16px;
+}
+
+.information{
+    background: #FFFFFF;
+    width: 700px;
+}
+
+.information-container{
+    margin-left: 32px;
+}
+
+.title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.info{
+    display: flex;
+}
+
+.headers{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C8E97;
+}
+
+.user-data{
+    margin-left:32px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.space{
+    height: 24px;
+}
+
+.password{
+    margin-bottom: -20px;
+    background: #FFFFFF;
+}
+
+.password-wrapper{
+    display: flex;
+    margin-left: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change-password-button{
+    margin-right: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #5A6FB9;
+    background:none;
+    border:none;
+    padding:0;
+    cursor: pointer;
+
+}
+
+
+
+.button-change{
+    padding: 12px 24px;
+    gap: 10px;
+    width: 200px;
+    height: 48px;
+    background: linear-gradient(93.75deg, #F7CE46 3.76%, #FBE27E 90.19%);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.password-change{
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-bottom: 16px;
+    width: 399px;
+    height: 48px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+}
