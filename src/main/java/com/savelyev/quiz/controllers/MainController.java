@@ -1,6 +1,7 @@
 package com.savelyev.quiz.controllers;
 
 import com.savelyev.quiz.model.application.Topic;
+import com.savelyev.quiz.services.ThemeService;
 import com.savelyev.quiz.services.TopicService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -14,15 +15,16 @@ public class MainController {
 
     private final TopicService topicService;
 
+    private final ThemeService themeService;
     @GetMapping("/main")
-    public String mainPage(){
+    public String mainPage(Model model){
+        model.addAttribute("themes", themeService.findAll());
         return "main";
     }
 
-    @GetMapping("/set/{id}")
+    @GetMapping("/topics/{id}")
     public String setPage(@PathVariable("id") Long id, Model model){
-        Topic topic = topicService.findTopicById(id);
-        model.addAttribute("topic",topic);
+        model.addAttribute("topic",topicService.findTopicById(id));
         return "set";
     }
 

@@ -13,9 +13,10 @@ import java.util.List;
 @Data
 public class Topic extends BaseEntity {
     private String name;
+    private String preview;
     @ManyToOne
+    @JoinColumn(name = "theme_id")
     private Theme theme;
-
     @ManyToMany
     @JoinTable(name = "topic_list",
             joinColumns = @JoinColumn(name = "topic_id"),
