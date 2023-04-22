@@ -8,90 +8,21 @@
 <body>
 <div th:include="header"> </div>
  <div class="main-container">
-     <div class="collection-container">
+     <div class="collection-container" th:each="theme : ${themes}">
          <div class="theme">
-             <h1 class="theme-title">Животные </h1>
-             <p class="theme-count">25</p>
+             <h1 class="theme-title" th:text="${theme.name}">Животные </h1>
+             <p class="theme-count" th:text="${theme.topics.size()}">25</p>
          </div>
-         <div class="collection">
+         <div class="collection" th:each="topic : ${theme.topics}">
+             <a th:href="@{${@environment.getProperty('topic_url')}+'/'+${topic.id}}">
              <div class="set">
                  <div class="preview-containter">
                      <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
                  </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
+                 <h3 class="title" th:text="${topic.name}"> Информатика и вычислительная техника</h3>
+                 <p class="counter" th:text="${topic.words.size()}">34</p>
              </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">25</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-         </div>
-     </div>
-     <div class="collection-container">
-         <div class="theme">
-             <h1 class="theme-title">Профессии </h1>
-             <p class="theme-count">34</p>
-         </div>
-         <div class="collection">
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">25</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
-             <div class="set">
-                 <div class="preview-containter">
-                     <img class="preview" th:src="@{images/cat.jpg}" alt="logo">
-                 </div>
-                 <h3 class="title"> Информатика и вычислительная техника</h3>
-                 <p class="counter">34</p>
-             </div>
+             </a>
          </div>
      </div>
  </div>

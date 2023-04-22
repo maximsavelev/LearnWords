@@ -14,7 +14,7 @@ import java.util.List;
 public class ThemeService {
     private final ThemeRepository themeRepository;
 
-    List<Theme> findAll(){
+    public List<Theme> findAll(){
        return themeRepository.findAll();
     }
 }
