@@ -45,6 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeHttpRequests()
                 .antMatchers("/change_locale/**").permitAll()
                 .antMatchers("/registration/**").permitAll()
+                .antMatchers("/test/**").permitAll()
                 .antMatchers("/error/**").permitAll()
                 .antMatchers("/verify/**").permitAll()
                 .antMatchers("/reset/token/**").permitAll()

@@ -20,4 +20,10 @@ public class WordService {
                 .orElseThrow(() ->
                         new EntityNotFound(String.format("Word with id '%d' not found", id)));
     }
+
+
+    public Word findWordByWordName(String wordName) {
+        return  wordRepository.findWordByWordName(wordName)  .orElseThrow(() ->
+                new EntityNotFound(String.format("Word %s not found", wordName)));
+    }
 }

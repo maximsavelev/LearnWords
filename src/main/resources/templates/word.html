@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title th:text="${word.wordName}"></title>
+</head>
+<div th:include="header"></div>
+<body>
+
+<div class="flex-container">
+    <h3 th:text="${word.wordName}">Endeavour</h3>
+    <h2 th:text="${word.meaning}">Стремиться</h2>
+
+    <div class="pronounce-block" >
+        <h2 th:text="${word.transcription}">Стремиться</h2>
+        <audio class="music" preload="auto" >
+            <source th:src="${word.audio}" controls />
+        </audio>
+        <input class="musicstart" type="image" th:src="@{/images/pronounce.png}" border="0" alt="Submit" />
+    </div>
+    <div class="example">
+        <h3>Примеры использования222:</h3>
+        <div class="examples">
+            <h3 th:text="${word.example}"></h3>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    jQuery(function($){
+        $('.musicstart').on('click', function(){
+            $('.music')[0].play()
+        });
+        $('.music').hide();
+    });
+</script>
+</html>
