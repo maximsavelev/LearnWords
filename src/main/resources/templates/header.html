@@ -6,15 +6,19 @@
 </head>
 <body>
     <div id="main-header" class="header" >
+        <!--/*@thymesVar id="word"  type="java.lang.String"*/-->
+
         <div class="left-side">
+            <a th:href="@{/main}" >
             <div class="logo">
-                <img class="logotype" th:src="@{images/logo.png}" alt="logo">
+                <img class="logotype"  th:src="@{/images/logo.png}" alt="logo">
                 <p class="name">Learn Words</p>
             </div>
+            </a>
             <div class="search-panel">
-                <form class="search-form">
+                <form class="search-form" method="post"  th:action="@{/search}">
                     <button class="search-button" id="search-button" type="submit">Search</button>
-                    <input class="search-input" id="search-input" type="search" placeholder="Search...">
+                    <input   th:value="${wordName}" name="wordName" class="search-input" id="search-input" type="text" placeholder="Search...">
                 </form>
             </div>
         </div>
@@ -24,7 +28,7 @@
                 <h1 class="heading">Мои наборы</h1>
             </div>
             <div>
-                <a  th:href="@{${@environment.getProperty('profile-page_url')}}" data-toggle="tab" > <img class="profile" th:src="@{images/cat.jpg}" alt="profile"></a>
+                <a  th:href="@{${@environment.getProperty('profile-page_url')}}" data-toggle="tab" > <img class="profile" th:src="@{/images/cat.jpg}" alt="profile"></a>
             </div>
         </div>
     </div>
