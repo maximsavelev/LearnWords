@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title >h</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/header.css}"/>
+</head>
+<body>
+<span th:text="${numberDTO != null} ? ${numberDTO.number} : '1'">someValue</span>
+<form method="POST" class="form-signin" th:object="${numberDTO}" th:action="@{/test}">
+    <a th:href="@{/test/order/details(id=${numberDTO.number+1})}">
+
+</body>
+</html>
+</html>
