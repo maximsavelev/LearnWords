@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title >h</title>
+    <link th:rel="stylesheet" th:href="@{/styles/css/header.css}"/>
+</head>
+<body>
+<!--/*@thymesVar id="counter" type="java.lang.Integer"*/-->
+<form method="post" th:action="${#httpServletRequest.requestURI}" th:object="${answers}">
+ <div th:class="'question-'+${index.index+1}"  th:each="question,index : ${quiz.getQuestions()}">
+     <h1 th:text="${index.index+1}+')'+ ${question.question}"></h1>
+     <div th:each="option,i: ${question.getOptions()}">
+         <p th:text="${option}" ></p>
+         <input type="checkbox"  th:value="${option}"  th:field="*{choices[__${index.index}__]}" />
+     </div>
+     <p>_____________________</p>
+ </div>
+    <button type="submit">типо я выбрал ответ</button>
+</form>
+</body>
+</html>
+</html>
